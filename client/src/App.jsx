@@ -1,28 +1,41 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
+  const [left,setLeft] = useState(0);
+  const [top,setTop] = useState(0);
 
-  function moveUp(){
+  useEffect(() =>{
+    document.addEventListener("keydown",handleKeyDown);
 
+    function handleKeyDown(event){
+      if(event.key == "w"){
+        setTop(top =>top - 2);
+      }else if(event.key == "s"){
+        setTop(top =>top + 2);
+      }else if(event.key == "a"){
+        setLeft(left =>left - 2)
+      }else if(event.key == "d"){
+        setLeft(left =>left + 2)
+      }
+      
   }
+  return() =>{
+        document.removeEventListener("keydown",handleKeyDown)
+      }
+  },[])
 
-  function moveDown(){
+  
 
-  }
-
-  function moveLeft(){
-
-  }
-
-  function moveRight(){
-
-  }
 
   return (
     <>
       <div id='container'>
-        <div id='character'>
+        <div id='character' style={
+          {
+            left:`${left}px`,
+            top:`${top}px`
+            }}>
 
         </div>
         <div id='aboutMe'>
