@@ -10,13 +10,13 @@ function App() {
 
     function handleKeyDown(event){
       if(event.key == "w"){
-        setTop(top =>top - 2);
+        setTop(top =>top - 20);
       }else if(event.key == "s"){
-        setTop(top =>top + 2);
+        setTop(top =>top + 20);
       }else if(event.key == "a"){
-        setLeft(left =>left - 2)
+        setLeft(left =>left - 20)
       }else if(event.key == "d"){
-        setLeft(left =>left + 2)
+        setLeft(left =>left + 20)
       }
       
   }
@@ -36,6 +36,9 @@ function App() {
             left:`${left}px`,
             top:`${top}px`
             }}>
+
+        </div>
+        <div id='map'>
 
         </div>
         <div id='aboutMe'>
