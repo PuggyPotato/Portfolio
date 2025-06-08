@@ -47,6 +47,24 @@ function App() {
           <p id='bio'>Bored.</p>
           <a href='/journey'>Check My Journey</a>
         </div>
+        <div id='contactMe'>
+
+        </div>
+        <div id='journey'>
+
+        </div>
+        <div id='skills'>
+            <p>Javascript</p>
+            <p>TypeScript</p>
+            <p>Golang</p>
+            <p>C++</p>
+        </div>
+        <div id='projects'>
+          <p>Telegram Gold Tracker / Silver Tracker</p>
+          <p>Marketplace With MERN</p>
+          <p>Peanut Butter</p>
+
+        </div>
       </div>
     </>
   )
